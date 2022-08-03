@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo+2");
+
+* {
+  font-family: "Baloo 2", cursive;
+  color: yellow;
+  animation: fadeIn 0.75s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: 70px;
+  height: 40px;
+  padding-bottom: 3rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 55px;
+}
+
+#score {
+  display: none;
+  font-size: 30px;
+}
+
+.start-game {
+  height: 10rem;
+  width: 20rem;
+  margin-bottom: 3rem;
+  font-size: 75px;
+  color: black;
+}
+
+#failure {
+  display: none;
+  height: 0rem;
+}
+
+#controls {
+  margin-top: .5rem;
+}
+
+#restart {
+  display: none;
+  margin-top: 1.5rem;
+  font-size: 37px;
+  text-align: center;
+  border-radius: 10%;
+  color: black;
+}
+
+#left,
+#up,
+#right,
+#down {
+  height: 4rem;
+  width: 5rem;
+  font-size: 20px;
+  color: black;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+  align-items: center;
+  height: 100vh;
+  background-color: #1d1f20;
+  background-image: url(images/snakeGif.gif), url(images/snakeGif1.webp), url(images/snakeGif2.gif), url(images/snakeGif3.gif);
+  background-position: 5rem 5rem, 10rem 30rem, 87rem 5rem, 85rem 24rem;
+  background-repeat: no-repeat;
+}
+
+main {
+  display: none;
+  /* CHANGE TO NONE WHEN DONE WITH JS EDITS OR GRID WHEN EDITING */
+  grid-template: repeat(14, 1fr) / repeat(14, 1fr);
+  width: 40rem;
+  height: 40rem;
+  background-color: black;
+}
+
+.cell {
+  border: 0.1px solid white;
+
+}
+
+.cell.apple {
+  background-image: url(images/appleIcon.png);
+  background-size: cover;
+}
+
+.cell.snake {
+  background-color: yellow;
+  /* background-image: url(images/snakeHeadLeft.png);
+    background-size: cover; */
+}
+
+button {
+  border-radius: 20%;
+}
+
+#controls {
+  display: none;
+  grid-template: reapt(3, 1fr)/repeat(3, 1fr);
+}
+
+button.up {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+button.down {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+button.right {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+
+button.left {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+
+#headerOne {
+  display: flex; /* change to none when done with JS */
+  flex-direction: row;
+  border-right: .2rem solid #696969;
+  width: 3.5rem;
+  height: 1080px;
+  justify-content: center;
+  background-color: #171219;
+  border-bottom: .2rem solid black;
+  animation: fadeIn .25s;
+  position: absolute;
+  left: 0px;
+}
+
+nav {
+  display: none;
+  flex-direction: column;
+  font-size: 3rem;
+  text-align: center;
+}
+a {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: yellow;
+}
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  text-shadow: 10px 10px 10px black;
+}
+#headerTwo {
+  background-color: #171219;
+  border-right: .2rem solid black;
+  border-bottom: .2rem solid black;
+  height: 1080px;
+  position: sticky;
+  left: 5000px;
+}
+#book {
+  height: 50px;
+  width: 50px;
+}
+#bookOne {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+#gameSpeed1, #gameSpeed2, #gameSpeed3, #gameSpeed4, #gameSpeed5 {
+  color: black;
+  font-size: 32px;
+  text-align: center;
+}
+
+p {
+  font-size: 32px;
+}
+#inputButtons {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1281px) {
+  h1 {
+    font-size: 8rem;
+    height: 6rem;
+  }
+
+  h3 {
+    font-size: 5rem;
+    text-align: center;
+    height: 4rem;
+  }
+
+  main {
+    display: none;
+    grid-template: repeat(14, 1fr) / repeat(14, 1fr);
+    width: 55rem;
+    height: 55rem;
+    background-color: black;
+    margin-top: 8rem;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #controls {
+    padding: 5rem;
+    padding-top: 6rem;
+  }
+
+  .start-game {
+    height: 10rem;
+    width: 20rem;
+    margin-bottom: 3rem;
+    font-size: 75px;
+  }
+
+  #left,
+  #up,
+  #right,
+  #down {
+    height: 15rem;
+    width: 15rem;
+    font-size: 50px;
+  }
+
+  #failure {
+    font-size: 6rem;
+    height: 7rem;
+    text-align: center;
+  }
+
+  #score {
+    font-size: 4rem;
+  }
+
+  #restart-container {
+    padding-top: 5rem;
+  }
+
+  #restart {
+    height: 10rem;
+    width: 20rem;
+    text-align: center;
+    font-size: 50px;
+  }
+  #headerOne {
+  
+  }
+} 
